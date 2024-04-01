@@ -48,6 +48,7 @@ Selector labels
 {{- define "promotion-daily-first-deposit-service.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "promotion-daily-first-deposit-service.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
+tgs.kind: promotion
 {{- end }}
 
 {{/*
