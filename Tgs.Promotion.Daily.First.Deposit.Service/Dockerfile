@@ -9,6 +9,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
+COPY ["nuget.config", "."]
 COPY ["Tgs.Promotion.Daily.First.Deposit.Service/Tgs.Promotion.Daily.First.Deposit.Service.csproj", "Tgs.Promotion.Daily.First.Deposit.Service/"]
 COPY ["Tgs.Promotion.Daily.First.Deposit.Core/Tgs.Promotion.Daily.First.Deposit.Core.csproj", "Tgs.Promotion.Daily.First.Deposit.Core/"]
 COPY ["Tgs.Promotion.Daily.First.Deposit.Repository/Tgs.Promotion.Daily.First.Deposit.Repository.csproj", "Tgs.Promotion.Daily.First.Deposit.Repository/"]
