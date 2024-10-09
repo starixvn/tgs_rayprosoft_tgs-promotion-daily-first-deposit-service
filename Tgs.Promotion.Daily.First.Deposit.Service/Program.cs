@@ -97,7 +97,7 @@ builder.Services.AddNatsMessage(builder.Configuration.GetConnectionString("Nats"
     .SubscribeRegister<FormEventEx>(
         ProcessorTypes.DepositFormStatusChangedHandlerType,
         "tgs.payment.deposit.status_ex",
-        "tgs.promotion.first-deposit.deposit");
+        "tgs.promotion.daily-first-deposit.deposit");
 
 var app = builder.Build();
 {
